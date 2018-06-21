@@ -1,0 +1,14 @@
+{
+  "name": "proton-demo-app",
+  "version": "1.0.0",
+  "description": "A simple demo app for Proton with page navigation in the DOM",
+  "main": "app.js",
+  "author": "Rylan",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^2.0.2",
+    "photon": "^2.0.1"
+  }
+}
