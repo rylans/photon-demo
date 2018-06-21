@@ -13,6 +13,7 @@ function showHomeView() {
 function showDownloadsView() {
   const node  = document.getElementById('view-downloads');
   node.style.display = 'block';
+  ipcRenderer.send('init-users', '');
 }
 
 function showDocumentsView() {

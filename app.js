@@ -1,4 +1,6 @@
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, ipcMain} = require('electron')
+
+const userprovider = require('./js/main/userprovider')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -38,4 +40,10 @@ app.on('ready', function() {
     // when you should delete the corresponding element.
     mainWindow = null;
   });
+});
+
+
+// IPC handlers
+ipcMain.on('init-users', (event, arg) => {
+  event.sender.send('init-users-reply', userprovider.listUsers());
 });
