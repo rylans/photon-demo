@@ -1,9 +1,7 @@
 const {shell} = require('electron')
 const os = require('os')
-var {remote } = require('electron')
+const {remote} = require('electron')
 const {Menu, MenuItem} = remote
-//var Menu = remote.require('menu')
-//var MenuItem = remote.require('menu-item')
 
 // Build our new menu
 var menu = new Menu()

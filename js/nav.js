@@ -21,9 +21,6 @@ function showDocumentsView() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  var nodeList = document.querySelectorAll('.pane-view');
-  console.log(nodeList)
-
   hideAllPanes();
   showHomeView();
 
