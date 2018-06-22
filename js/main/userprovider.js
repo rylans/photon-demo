@@ -1,10 +1,20 @@
+const Store = require('electron-store');
+const store = new Store();
+
 exports.listUsers = function() {
-  return [
-    {'name': 'Candice Dunn',
-      'title': 'Chief Executive Officer'},
-    {'name':'Mali Hewitt',
-      'title': 'UI Designer'},
-    {'name':'Phillip Gregory',
-      'title': 'Senior software developer'}
-  ];
+  if (!store.has('users')) {
+    return [];
+  }
+  return store.get('users');
+};
+
+exports.addUser = function(u) {
+  if (!store.has('users')){
+    store.set('users', []);
+  }
+
+  var existingUsers = store.get('users');
+  existingUsers.push(u);
+
+  store.set('users', existingUsers);
 };

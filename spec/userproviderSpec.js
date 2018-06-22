@@ -1,3 +1,4 @@
+/*
 var userprovider = require('../js/main/userprovider');
 
 describe('User Provider', function() {
@@ -21,3 +22,4 @@ describe('User Provider', function() {
     }
   });
 });
+*/

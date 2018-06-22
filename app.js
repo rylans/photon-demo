@@ -2,6 +2,7 @@ const {app, BrowserWindow, ipcMain} = require('electron')
 
 const userprovider = require('./js/main/userprovider')
 
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 var mainWindow = null;
@@ -46,4 +47,8 @@ app.on('ready', function() {
 // IPC handlers
 ipcMain.on('init-users', (event, arg) => {
   event.sender.send('init-users-reply', userprovider.listUsers());
+});
+
+ipcMain.on('add-user', (event, user) => {
+  userprovider.addUser(user);
 });
