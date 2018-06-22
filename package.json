@@ -6,15 +6,16 @@
   "author": "Rylan",
   "scripts": {
     "start": "electron .",
-    "test": "jasmine"
+    "test": "jasmine",
+    "pack-mac": "electron-packager . electron-notes-app --platform=darwin --arch=x64 --asar --out dist --overwrite"
   },
   "dependencies": {
     "electron": "^2.0.2",
     "electron-store": "^2.0.0",
-    "nedb": "^1.8.0",
     "photon": "^2.0.1"
   },
   "devDependencies": {
+    "electron-packager": "^12.1.0",
     "jasmine": "^3.1.0",
     "spectron": "^3.8.0"
   }
